@@ -1,4 +1,4 @@
 language: objective-c
 xcode_project: ./PgySDKDemo.xcodeproj
 xcode_scheme: PgySDKDemo
-osx_image: xcode9.2
+osx_image: xcode8.1
