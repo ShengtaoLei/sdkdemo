@@ -1,2 +1,1 @@
-# sdkdemo
-The demo project of how to use pgyer sdk
+#The demo project of how to use pgyer sdk
