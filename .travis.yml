@@ -2,3 +2,4 @@ language: objective-c
 xcode_project: ./PgySDKDemo.xcodeproj
 xcode_scheme: PgySDKDemo
 osx_image: xcode8.1
+script: xcodebuild -project PgySDKDemo.xcodeproj 
