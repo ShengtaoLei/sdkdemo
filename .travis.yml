@@ -1,2 +1,2 @@
 language: objective-c
-script: xcodebuild -project PgySDKDemo.xcodeproj -scheme PgySDKDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO 
+osx_image: xcode9
