@@ -15,11 +15,13 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv
   -in scripts/travis/sdk_demo.cer.enc -out scripts/travis/sdk_demo.cer -d
 - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv
-  -in scripts/provile/sdk_demo.mobileprovision.enc -out scripts/profile/sdk_demo.mobileprovision -d
+  -in scripts/profile/sdk_demo.mobileprovision.enc -out scripts/profile/sdk_demo.mobileprovision -d
 - chmod +x scripts/travis/add-key.sh
 - chmod +x scripts/travis/remove-key.sh
 - chmod +x scripts/travis/sign-and-upload.sh
+before_script:
+- ./scripts/travis/add-key.sh 
 after_script: 
--"./scripts/travis/remove-key.sh"
+- ./scripts/travis/remove-key.sh
 after_success:
-- "./scripts/travis/sign-and-upload.sh"
+- ./scripts/travis/sign-and-upload.sh
