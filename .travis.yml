@@ -10,9 +10,12 @@ env:
   - secure: kPN3VqqvQoa2yk+4s6mx8Ixwm97qwAViKKC9ihYCrWO+Ff2qJPypcue3RvbVuAqBKg0xLsyPrqkQXfxKl1yj366djEWaut213YVbe5ry/AtLddvxBaXk/bfjjtpgUxPBCXx5ABVxLLFgyZkmWjaCvftlY7EgWTWBlZ0Nsc28GFDh1Tno78EToewi8jWPIjM5CTlXeUGyysvaraSQFjDYjwLWkWtnVJc1ybpK1ZknyoCEhOWkoe4DMQEoB4Iqbpnvd5poFkKXfzSjgxk7wUOPLB1nX9PFJyevwDfV4IMecTb7mAIHXnb3tYyqpbZkph4EKDHsWooNu74THiD7C96CFjrsEezUCZb06NoTRmeafN6hdQPUHF+WeCcDsT9OJmL87N8mPSy2FbKMEmwfn/55rokmvhMMBeianSAsRqi0WAjCSYaebv+hq63wHby0OuSbL6SvwNoyFqipn7NXKMjvIh19kGc7PFwueadVTz4yUOMZcFoWoeo+TmwELOXZpUZAvsoqhSaEo2uzgj0G50WlOTSrT7JINKAzYfqv2/CahxRiBpy8NpC/wFM5RFAQv8BuVeCmfTjlmFhxEsjbxO9HwAzthiTIZ5NCWLnLyLAgyijx3vbDiGfjLNyAcwIdfyrvIT8djxF2snTxfkEP0ExdROhFL4xUV8uIxCvt/kAy67Q=
   - secure: fkAW9u5VmSwfAuacW8L9j462PwHDvNqnw6TVvB/9phYA8tCXIG7yQW3U/ymIdBr5SBJKF/5bh5YR62jxZj4oDbmglnaQ0CqhfGBqUnw188vfN6epV1gI0xfIAXzv01PncOP30fqGOhPKHNnU2H1n/+XMprXqV9AMyRWNrHSeqPGHxb42ZopJZGvkXwLXYT9UZqy10fK8jtbz09QQD1pTgJH0Kzb5Hd/R7LYydElngHCaw3Uu1Q8JxvJGbO8k559VhP5Zk499g8LHufOwdzXoM7h5lUfnvSAdLolGJGIqfXQaYPNqEtLtU4yGiQrCZMN4p+O4LbJ9LnYrlVNrF5qZ51lZANBYAr/M42SL/mycghL8vi1+PERCoyM5jS4I9poTDR7CfmSxvAKxqRA/4IpKbjXtII0k5qywAEK9taDNhW6GrjudzjiYr2xetxr1goN4/mb3ZphGRZ/urjoeIksvx2/wByU05FMxeD63yqLSF6eqywKAUpXKK/9YCQPSmTpjCduq00a2RJ8N9Vm14OFgG33Rp9glMLE9plrrSuVByLa4EIDcg4mmGk0WrLaM+imkoDc8upKvpdSuK9pPPKuGcBMDwztO2tLuN15/JZZiYHvkmdCyM15zXyVtxZhal3FVt0zfVVBBmdzZ0zIEzvh1h8Kp4uzXsVnAjGCnIRPrY28=
 before_install:
-  - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv -in scripts/travis/sdk_demo.p12.enc -out scripts/travis/sdk_demo.p12 -d
-  - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv -in scripts/travis/sdk_demo.cer.enc -out scripts/travis/sdk_demo.cer -d
-  - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv -in scripts/profile/sdk_demo.mobileprovision.enc -out scripts/profile/sdk_demo.mobileprovision -d
+  - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv 
+	-in scripts/travis/sdk_demo.p12.enc -out scripts/travis/sdk_demo.p12 -d
+  - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv 
+	-in scripts/travis/sdk_demo.cer.enc -out scripts/travis/sdk_demo.cer -d
+  - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv 
+	-in scripts/profile/sdk_demo.mobileprovision.enc -out scripts/profile/sdk_demo.mobileprovision -d
   - chmod +x scripts/travis/add-key.sh
   - chmod +x scripts/travis/remove-key.sh
   - chmod +x scripts/travis/sign-and-upload.sh
