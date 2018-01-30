@@ -10,6 +10,8 @@ env:
   - secure: VBRYh1WsDEzLC0LK3A3C2Xjk6z/X6vPLNWO/VFn0FQHldhmJyF2SgJE2k8egIXhLKfPXfpn5bklYZcj/kVWNhp5vYM1fJk6kTd4fAMOxM/CawaYbhEe1P/vwxKCTVaKzTx8OXAmh9gX78J6cgMsC7LhEm8E2JSfOCoHnm+Swi0z16P6XOkgivFvGbOPy2llXuD4cV2n/EIF5EbfnjxkUxy/PPJxRzbaBjIP4u1n0xVAWJPZpwflm5Rt7gWCasjnMf5oj+S4dLY+7Igz+SGGOhhul+/jp4BhoC9YsbhmfPfO6REgb9MmqNtcoccEpJ74Vmr/o6cFOn8n3TjfHxdqaK9pKMkHuAKZ0S+G1cPVS3/ECjMeInjAChAiu280lzPSs8TjfHemvQKUktAd532r+toMRWXNxFMHWND/SLkyD1zLvofG7hYKJ82qJQ/0UT5q6ukI8VU0fWmop52pgzUS1QtvonRF7Xm8MRsr+rW34Ta4zydd86vDSevEzhTDOpOx2y76ZqjrYjEvOPiBdWAlCUI03ZboJtMwPtigQOBHbXcmOjtTK9zvXwhpEsmMZyEk4g4uYSf5v4ReS1+HZFa6OS3Mx1/iOba7DqF+5NxCxsOmzf/KY8kL8wTyCrxxd2CTG+X8k+icYI6Hwp+JxKrgu1FeGOC43UYzOuacxQpxfkGk=
 before_install:
 - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv
+  -in sdk_demo.cer.enc -out sdk_demo.cer -d
+- openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv
   -in README.md.enc -out README.md -d
 - chmod +x scripts/travis/add-key.sh
 - chmod +x scripts/travis/remove-key.sh
