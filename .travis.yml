@@ -2,7 +2,6 @@ language: objective-c
 osx_image: xcode9
 os: osx
 env:
-  global:
   - APP_NAME: PgySDKDemo
   - DEVELOPER_NAME: iPhone Distribution: shengtao lei (DG37YK9PRK)
   - PROFILE_NAME: sdk_demo
