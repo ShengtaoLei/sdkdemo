@@ -5,3 +5,24 @@ env:
   - APPNAME=PgySDKDemo
   - PROFILE_NAME=sdk_demo
   - DEVELOPER_NAME=iPhone Distribution: shengtao lei (DG37YK9PRK)
+  - secure: VE9opXtdtxSYb9rFZflJE9TAki9Sk4Cc/zR430rXh+G1QdopuuojFaPoHDd1La5zL7PbctPfrCY1FesviUh2rGfXfstmOkLZhRhI8dLrAnj/GlqTH5c8TV/HiZZzLUUuvLva7BZ65DLO0f18oxJa7V+YK0kqWZNpMLfm8YhISELTtSUfgTqFgXcvfLHfshuZxWmPs6fRGP20wEQwf52Oh5pdIN+uL3IwfJqt3AusC8P5EpKX7Y4qvUDKC5V5vF2bPkibJkPi8Pgm6utt+5AkxdhCyHjijelc8IU0zUpzoJBi15Ja8zH43CJZg7vK3kyDDMYKoB+W2ll1F4HjWO3SW4pwwOK3Y1SA97hS+x2PUazm/m9xDJILpenMmFJvpCakCz0cFPojmDumb9L5/Eljv9XaZMFbvX3OSa/sQvQxnlr3DYkhpGZJ5A8EmZgHtKnq6kHu0s2gTuNsAexxvieBRbB2JUAHVugS7QE861gKVc0vxByAIUwS1IT2BchdqK6guv8IZ4lJaEXKgG7jlcKV3YeGhtZ3WITPW/GUdGdAhEHUsaLAty4ASFEPNrPgzN1GDHeAgVBw3+5hfINAwc5ci589Umu3gyHhDlaRUlvFOQxE1UzPAF2CLOS2Yy2Zfk+oNbNwHGo5o6vQrWIAC8uUW8D9IrSHk39do+mlc5twO/A=
+  - secure: XVf4CXSK5OddhGPyh56MQ2ZojxbJlHTZMRbF49cueXKK5Sb5aifL35bdEYRR/k3yXWZf6cQOjKcfnQqcrygHkouzIc1NyTDtHR8Bl4J+stvc69QsUDdxQcL4yWP3XVH24XOAXMHYsnLDQSF3lRExlEW0znNFaF1PIBm//0/5cOj12iVO+0xnNAidKuy/OQTvIz+/dAUfth9qkrPW8+RBElSVSbSnjvIvNhGaztoeMh0ijeE4fToIThIu0PPkvgil9kS+oL0jGzYTRaR6VLZ1jc84lczQNUI1I5JYHHkcgVI6EOCGqQjwdu+iJTdfXZJz5ic/8E1YMvJXQoqHt04cw6TXWmbPVaPqmbDYtqnCqKFSgHCdCzEdzBbQs2BjhgtraTTQTLXrwxA7fujgId0CVYchrr40R4TDnBfhsOLoLxHcL45muLQDj336tTcwi5jwABV828LBvWXwyY/kLJ+7Itne7Is5mPwEYsRt0DWpIboQmnzGkmydQRgYDmIl3NIGa3kdk0VjoddUjPAA74CuMbw1kf3DjOihXA+CduKgb3IAK6TMXn+GkTh5DXqMsoX28ht7EhmgrWaLzijfjoFGDe6uAbgvhAgeZFoXox3KxMvxA2J829uC6N5B8Pg9NKDBnWNNCzhdUXGacL9YOaCmPVF4Er6g2vdGdbxT4Dbf4tc=
+  - secure: lhFyei3r5nCb5kL5TkRlCDH+JveZf3wE9J+0qrV4/ZX0ZSnpbNdi9K/qFcil2UKp+QlNKnHMATbbhHLYFhYRn34XGEQ/8Ph4u3PL7rWojfYEDbIT8bPEHSC7CWxVi67M2Aw/hd+wCobbNZDgpP7YbI3N9+vyqmrQj1PYLi0zqwptwn3pmQzxJ24FBFu63wNDphCBZQyic7smPYUU7YziOATUV0G9j6TQL/bIod1y/JjQvI3Gi08v/mcsdN1W1dY6ZRcmrA5gkrhf0BLRLW2DCMLEUu0KnCBTRL92lr6Pi2c0l7PRqKvc+qQSBUS9nLNm7gXV9rzF0+EMGu+dAwc3bx+qLA3IMaTasl5cHqnnrQgjuYZ0XFD/8gLzK4E9E/86c/yrZHu5LvqFlNatmRvxON+Hkz8P3xy2/tmlpFc0dQzvWC8v+ICmNPXHygNlL8ikB6thj8Kke+3fgtIXzHpK1AHVfmzrR9HQjRrjQsI6wX9gjCxUh8Ex4BGvvOI1ZjiFcPWpIscsB4LmO43mBgegjka4cou+/mrb2GhI4qaPmzhvl46NfH4t0kXbkyfpvhvlonbcVwGoLAIhtuoFjbrRG09LLdpIYdhxwINwSLxkO02elj9XoMaaiOjhNj8Imia5sEh1dHMLm+Vy/V242u61/xnJSpYvCyzLMLEvNed/8ZA=
+dd:
+- openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv
+  -in scripts/travis/sdk_demo.cer.enc -out scripts/travis/sdk_demo.cer -d
+- openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv
+  -in scripts/travis/sdk_demo.p12.enc -out scripts/travis/sdk_demo.p12 -d
+- openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv
+  -in scripts/profile/sdk_demo.mobileprovision.enc -out scripts/profile/sdk_demo.mobileprovision
+  -d
+before_install:
+- chmod +x scripts/travis/add-key.sh
+- chmod +x scripts/travis/remove-key.sh
+- chmod +x scripts/travis/sign-and-upload.sh
+before_script:
+- "./scripts/travis/add-key.sh"
+after_script:
+- "./scripts/travis/remove-key.sh"
+after_success:
+- "./scripts/travis/sign-and-upload.sh"
