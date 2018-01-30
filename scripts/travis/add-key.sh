@@ -20,3 +20,4 @@ echo " ****** "
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
 cp "./scripts/profile/sdk_demo.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
 
+security set-key-partition-list -S apple-tool:,apple: -k "travis" ~/Library/Keychains/ios-build.keychain-db
