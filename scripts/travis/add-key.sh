@@ -5,12 +5,9 @@ security default-keychain -d user -s ios-build.keychain
 security unlock-keychain -p travis ios-build.keychain
 security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-build.keychain
 
-ls -a scripts/travis
-ls -a
-pwd
 security import ./scripts/travis/AppleWWDRCA.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign 
-security import ./scripts/travis/sdk_demo.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
-security import ./scripts/profile/sdk_demo.p12 -k ~/Library/Keychains/ios-build.keychain -P $KEY_PASSWORD -A
+security import sdk_demo.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
+security import sdk_demo.p12 -k ~/Library/Keychains/ios-build.keychain -P $KEY_PASSWORD -A
 
 echo "list keychains: "  
 security list-keychains
