@@ -5,6 +5,7 @@ security default-keychain -d user -s ios-build.keychain
 security unlock-keychain -p travis ios-build.keychain
 security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-build.keychain
 
+ls -a scripts/travis
 ls -a
 pwd
 security import ./scripts/travis/AppleWWDRCA.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign 
