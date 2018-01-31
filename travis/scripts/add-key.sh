@@ -19,6 +19,6 @@ security find-identity -p codesigning  ~/Library/Keychains/ios-build.keychain
 echo " ****** "
 
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp "sdk_demo.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+cp "./travis/certificates/sdk_demo.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
 
 security set-key-partition-list -S apple-tool:,apple: -k "travis" ~/Library/Keychains/ios-build.keychain-db
