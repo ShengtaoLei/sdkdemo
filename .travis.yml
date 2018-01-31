@@ -15,6 +15,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_3c4b9fb3b43f_key -iv $encrypted_3c4b9fb3b43f_iv
   -in certificates.tar.enc -out certificates.tar -d
 - tar xvf certificates.tar -C ./travis/certificates
+- chmod +x pgyer_upload.sh
 - chmod +x travis/scripts/add-key.sh
 - chmod +x travis/scripts/build.sh 
 - chmod +x travis/scripts/upload.sh
