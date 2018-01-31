@@ -316,7 +316,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: shengtao lei (DG37YK9PRK)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DG37YK9PRK;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PgySDKDemo",
@@ -341,7 +341,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: shengtao lei (DG37YK9PRK)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = DG37YK9PRK;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PgySDKDemo",
