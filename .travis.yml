@@ -13,12 +13,14 @@ before_install:
   -in certificates.tar.enc -out certificates.tar -d
 - tar xvf certificates.tar -C ./travis/certificates
 - chmod +x travis/scripts/add-key.sh
+- chmod +x travis/scripts/build.sh 
+- chmod +x travis/scripts/upload.sh
 - chmod +x travis/scripts/remove-key.sh
-- chmod +x travis/scripts/sign-and-upload.sh
 before_script:
 - "./travis/scripts/add-key.sh"
+script:
+- "./travis/scripts/build.sh"
 after_success:
-- set -e
-- "./travis/scripts/sign-and-upload.sh"
+- "./travis/scripts/upload.sh"
 after_script:
 - "./travis/scripts/remove-key.sh"
