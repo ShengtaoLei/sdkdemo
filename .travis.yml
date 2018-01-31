@@ -25,6 +25,7 @@ before_script:
 script:
 - "./travis/scripts/build.sh"
 after_success:
-- "./travis/scripts/upload.sh"
+- ./pgyer_upload.sh "./build/$APPNAME.ipa" "$PGYER_APIKEY"
+# - "./travis/scripts/upload.sh"
 after_script:
 - "./travis/scripts/remove-key.sh"
